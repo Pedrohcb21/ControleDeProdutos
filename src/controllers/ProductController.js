@@ -27,7 +27,8 @@ async function AddProductController(req, res) {
             quantidade: req.body.quantidade,
             valorUnitario: req.body.valorUnitario
         })
-    
+        
+        console.log(product)
         await product.save()
         
         return res.status(201).send('Register product')
